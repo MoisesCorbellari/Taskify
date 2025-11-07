@@ -15,16 +15,19 @@ def find_todolist_by_id(id_task: int, db: Session) -> Task:
     
     return todo_list
 
+#endpoint para obter todas as tarefas
 @router.get("/get-all", response_model=List[ToDoListResponse])
 def get_all_todo_list(db: Session = Depends(get_db)) -> List[ToDoListResponse]:
     return db.query(Task).all()
 
+#endpoint para obter tarefas por id
 @router.get("/get-by-id/{id_task}", response_model=ToDoListResponse)
 def get_todo_list_by_id(id_task: int,
                         db: Session = Depends(get_db)) -> List[ToDoListResponse]:
     todo_list: Task = find_todolist_by_id(id_task, db)
     return todo_list
 
+#endpoint para criar tarefas
 @router.post("/create", response_model=ToDoListResponse, status_code=201)
 def create_todo_list(task_request: ToDoListRequest,
                      db: Session = Depends(get_db)) -> ToDoListResponse:
@@ -38,6 +41,7 @@ def create_todo_list(task_request: ToDoListRequest,
     db.refresh(todo_list) 
     return todo_list 
 
+#endpoint para atualizar tarefas
 @router.put("/update/{id_task}", response_model=ToDoListResponse, status_code=200)
 def update_todo_list_by_id(id_task: int,
                             task_request: ToDoListRequest,
@@ -53,7 +57,8 @@ def update_todo_list_by_id(id_task: int,
     db.refresh(todo_list)
     return todo_list
 
-@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200) #endpoint para finalizar tarefas
+#endpoint para finalizar tarefas
+@router.post("/finish/{id_task}", response_model=ToDoListResponse, status_code=200)
 def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoListResponse:
     todo_list = find_todolist_by_id(id_task, db)
 
@@ -67,6 +72,7 @@ def finish_todo_list_by_id(id_task: int, db: Session = Depends(get_db)) -> ToDoL
     db.refresh(todo_list)
     return todo_list
 
+#endpoint para apagar tarefas
 @router.delete("/delete/{id_task}", status_code=204)
 def delete_todo_list_by_id(id_task: int,
                      db: Session = Depends(get_db)) -> None:
