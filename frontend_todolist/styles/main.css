@@ -18,7 +18,7 @@ body {
 .name {
   font-size: 2rem;
   margin: 0px;
-  color: #243b55;
+  color: #1E90FF;
 }
 
 .container {
@@ -52,7 +52,7 @@ body {
   border-radius: 1rem;
   border: 2px solid transparent; /*borda base*/
   background: linear-gradient(#fff, #fff) padding-box, /* fundo branco */
-              linear-gradient(45deg, #203A4C, #685C85) border-box; /*gradiente na borda*/
+              linear-gradient(45deg, #203A4C, #1E90FF) border-box; /*gradiente na borda com DodgerBlue*/
   box-sizing: border-box;
   font-size: 1.2rem;
   font-family: inherit;
@@ -67,7 +67,7 @@ body {
   border-radius: 1rem;
   border: 2px solid transparent; /*borda base*/
   background: linear-gradient(#fff, #fff) padding-box, /*fundo branco*/
-              linear-gradient(45deg, #203A4C, #685C85) border-box; /*gradiente na borda*/
+              linear-gradient(45deg, #203A4C, #1E90FF) border-box; /*gradiente na  com DodgerBlue*/
   width: 40rem;
   box-sizing: border-box;
   resize: vertical;
