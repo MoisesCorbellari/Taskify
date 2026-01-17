@@ -2,7 +2,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from datetime import date
 from typing import Optional
 
-class ToDoListResponse(BaseModel):
+class Do_Up_Response(BaseModel):
     id: int
     title: str
     description: str
@@ -14,7 +14,7 @@ class ToDoListResponse(BaseModel):
             from_attributes=True
         )
 
-class ToDoListRequest(BaseModel):
+class Do_Up_Request(BaseModel):
     title: str = Field(min_length=1, max_length=50)
     description: Optional[str] = Field(None, max_length=255)
     completed: bool = Field(default=False)
