@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from shared.dependencies import get_db
 from sqlalchemy.orm import Session
-from project_todo_list.models.todo_list_model import DoUp
+from project_do_up.models.do_up_model import DoUp
 from typing import List
 from shared.exception import NotFound
-from project_todo_list.schemas.schema import ToDoListRequest, ToDoListResponse
+from project_do_up.schemas.schema import ToDoListRequest, ToDoListResponse
 
 router = APIRouter(prefix='/DoUp', tags=["Lista de tarefas"])
 

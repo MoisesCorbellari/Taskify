@@ -1,6 +1,6 @@
 from uvicorn import run
 from fastapi import FastAPI
-from project_todo_list.routers import todo_list_router
+from project_do_up.routers import do_up_router
 from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 
@@ -19,7 +19,7 @@ app = FastAPI(
 def todoList() -> str:
     return "DoUp - API para Lista de Tarefas."
 
-app.include_router(todo_list_router.router)
+app.include_router(do_up_router.router)
 app.add_exception_handler(NotFound, not_found_exception_handler)
 
 if __name__ == "__main__":

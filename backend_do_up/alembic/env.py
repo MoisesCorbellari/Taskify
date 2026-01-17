@@ -27,7 +27,7 @@ if config.config_file_name is not None:
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-from project_todo_list.models.todo_list_model import DoUp # type: ignore
+from backend_doup.project_do_up.models.do_up_model import DoUp # type: ignore
 
 from shared.database import Base
 

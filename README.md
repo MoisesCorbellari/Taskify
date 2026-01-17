@@ -15,18 +15,18 @@ Desenvolvido com **SQLAlchemy** para manipulação do banco de dados e **Alembic
 ### Estrutura do Projeto
 A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
-backend_todolist/
+backend_do_up/
   alembic/
     versions/              
     env.py                   
     README                   
     script.py.mako           
 
-  project_todo_list/
+  project_do_up/
     models/                  
-      todo_list_model.py
+      do_up_model.py
     routers/
-      todo_list_router.py
+      do_up_router.py
     schemas/
       schema.py
     
@@ -40,7 +40,7 @@ backend_todolist/
   main.py
   requirements.txt -> arquivo com as dependências do projeto
 
-frontend_todolist/
+frontend_do_up/
   public/
     index.html
   src/
