@@ -1,6 +1,6 @@
 # DoUp - Lista de Tarefas (Em desenvolvimento)
-O DoUp - Lista de Tarefas é um projeto para aplicação prática de conhecimentos em APIs.  
-Desenvolvido com **SQLAlchemy** para manipulação do banco de dados e **Alembic** para migrações, o projeto fornece uma API que permita ao usuário organizar suas atividades diárias, oferecendo funcionalidades para criar, ler, atualizar, excluir e finalizar tarefas.
+Projeto voltado para aplicação prática de conhecimentos em desenvolvimento de APIs.  
+Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o DoUp fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade de finalização de tarefas.
 
 ### Tecnologias Utilizadas
 - **Python 3.14.2**: Linguagem de programação principal
@@ -15,18 +15,18 @@ Desenvolvido com **SQLAlchemy** para manipulação do banco de dados e **Alembic
 ### Estrutura do Projeto
 A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
-backend_do_up/
+backend_doup/
   alembic/
     versions/              
     env.py                   
     README                   
     script.py.mako           
 
-  project_do_up/
+  project_doup/
     models/                  
-      do_up_model.py
+      doup_model.py
     routers/
-      do_up_router.py
+      doup_router.py
     schemas/
       schema.py
     
@@ -40,7 +40,7 @@ backend_do_up/
   main.py
   requirements.txt -> arquivo com as dependências do projeto
 
-frontend_do_up/
+frontend_doup/
   public/
     index.html
   src/
