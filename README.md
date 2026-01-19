@@ -1,6 +1,6 @@
-# DoUp - Lista de Tarefas (Em desenvolvimento)
+# Taskify - Lista de Tarefas (Em desenvolvimento)
 Projeto voltado para aplicação prática de conhecimentos em desenvolvimento de APIs.  
-Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o DoUp fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade de finalização de tarefas.
+Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o Taskify fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade de finalização de tarefas.
 
 ### Tecnologias Utilizadas
 - **Python 3.14.2**: Linguagem de programação principal
@@ -15,18 +15,18 @@ Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para c
 ### Estrutura do Projeto
 A estrutura do projeto é organizada da seguinte forma:
 ```plaintext
-backend_doup/
+backend_taskify/
   alembic/
     versions/              
     env.py                   
     README                   
     script.py.mako           
 
-  project_doup/
+  project_taskify/
     models/                  
-      doup_model.py
+      task_model.py
     routers/
-      doup_router.py
+      task_router.py
     schemas/
       schema.py
     
@@ -40,7 +40,7 @@ backend_doup/
   main.py
   requirements.txt -> arquivo com as dependências do projeto
 
-frontend_doup/
+frontend_taskify/
   public/
     index.html
   src/

@@ -27,7 +27,7 @@ if config.config_file_name is not None:
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-from project_doup.models.doup_model import DoUp # type: ignore
+from project_taskify.models.task_model import Task # type: ignore
 
 from shared.database import Base
 

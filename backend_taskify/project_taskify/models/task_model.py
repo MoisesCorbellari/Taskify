@@ -2,8 +2,8 @@ from sqlalchemy import Column, Date, Integer, String, Boolean, Text
 from shared.database import Base
 from datetime import date
 
-class DoUp(Base):
-    __tablename__ = "doup_tasks"
+class Task(Base):
+    __tablename__ = "tasks"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String(255), nullable=False) 
