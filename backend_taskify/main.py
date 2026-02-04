@@ -13,7 +13,7 @@ app = FastAPI(
 
 @app.get(
     "/",
-    summary="Página inicial da API 'Taskify - Lista de Tarefas'",
+    summary="Página inicial da API",
 )
 def todoList() -> str:
     return "Taskify - API para Lista de Tarefas"
