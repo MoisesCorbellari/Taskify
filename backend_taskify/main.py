@@ -16,7 +16,7 @@ app = FastAPI(
     summary="Página inicial da API",
 )
 def todoList() -> str:
-    return "Taskify - API para Lista de Tarefas"
+    return "Taskify - API para Lista de Tarefas!"
 
 app.include_router(task_router.router)
 app.add_exception_handler(NotFound, not_found_exception_handler)
