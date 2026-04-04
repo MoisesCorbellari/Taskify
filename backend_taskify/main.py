@@ -1,6 +1,6 @@
 from uvicorn import run
 from fastapi import FastAPI
-from project_taskify.routers import task_router
+from project_taskify.routers.task_router import router
 from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 
@@ -18,7 +18,7 @@ app = FastAPI(
 def todoList() -> str:
     return "Taskify - API para Lista de Tarefas!"
 
-app.include_router(task_router.router)
+app.include_router(router)
 app.add_exception_handler(NotFound, not_found_exception_handler)
 
 if __name__ == "__main__":
