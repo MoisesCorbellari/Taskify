@@ -15,7 +15,7 @@ app = FastAPI(
     "/",
     summary="Página inicial da API",
 )
-def todoList() -> str:
+def todo_list() -> str:
     return "Taskify - API para Lista de Tarefas!"
 
 app.include_router(router)
