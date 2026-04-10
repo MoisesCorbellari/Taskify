@@ -6,10 +6,10 @@ from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
-SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
+TOKEN_SQLALCHEMY = os.getenv("TOKEN_SQLALCHEMY")
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
+    TOKEN_SQLALCHEMY
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
