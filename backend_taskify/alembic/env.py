@@ -9,9 +9,9 @@ from alembic import context
 
 load_dotenv()
 
-database_url = os.getenv("TOKEN_SQLALCHEMY")
+database_url = os.getenv("TOKEN_DB")
 if not database_url:
-    raise ValueError("A variável de ambiente TOKEN_SQLALCHEMY não foi definida!")
+    raise ValueError("A variável de ambiente TOKEN_DB não foi definida!")
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
