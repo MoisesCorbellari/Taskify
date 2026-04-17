@@ -7,10 +7,10 @@ from sqlalchemy.ext.declarative import declarative_base
 
 load_dotenv()
 
-TOKEN_DB = os.getenv("TOKEN_DB")
+TOKEN = os.getenv("TOKEN")
 
 engine = create_async_engine(
-    TOKEN_DB
+    TOKEN
 )
 AsyncSessionLocal = async_sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
