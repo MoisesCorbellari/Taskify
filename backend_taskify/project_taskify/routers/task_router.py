@@ -13,7 +13,7 @@ async def get_task_or_404(id_task: int,
                           db: AsyncSession) -> Task:
       task = await db.get(Task, id_task)
       if task is None:
-        raise NotFound(name="Task")
+        raise NotFound(name="")
       
       return task
 
