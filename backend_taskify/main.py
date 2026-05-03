@@ -7,7 +7,7 @@ from shared.exceptions_handler import not_found_exception_handler
 app = FastAPI(
     title="Taskify - Lista de Tarefas!",
     description="""
-    API para gerenciamento de tarefas, fornece endpoints para operações CRUD (Create, Read, Update, Delete), além de um endpoint específico para finalizar tarefas.
+    API para gerenciamento de tarefas, fornece endpoints para operações CRUD (Create, Read, Update, Delete), além de um endpoint específico para finalizar tarefas
     """,
 )
 
