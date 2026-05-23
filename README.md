@@ -13,7 +13,7 @@ Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para c
 ---
 
 ### Estrutura
-A estrutura do projeto é organizada da seguinte forma:
+A estrutura da aplicação é organizada da seguinte forma:
 ```
 ├── backend_taskify
 │   ├── alembic
