@@ -1,6 +1,6 @@
 from uvicorn import run
 from fastapi import FastAPI
-from backend_taskify.project_taskify.routers.main_router import router
+from project_taskify.routers.main_router import router
 from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 
