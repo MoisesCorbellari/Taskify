@@ -3,7 +3,7 @@ Projeto voltado para aplicação prática de conhecimentos em desenvolvimento de
 Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o Taskify fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade de finalização de tarefas.
 
 ### Tecnologias Utilizadas
-- **Python 3.14.5**: Linguagem de programação principal
+- **Python 3.14**: Linguagem de programação principal
 - **FastAPI**: Framework para desenvolvimento de APIs
 - **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados
 - **Alembic**: Ferramenta para gerenciar migrações de banco de dados
