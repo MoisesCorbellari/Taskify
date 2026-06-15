@@ -27,13 +27,7 @@ WORKDIR /app
 # Copia dependências instaladas
 COPY --from=builder /install /usr/local
 
-# Cria usuário da aplicação
-RUN useradd --create-home --shell /bin/bash appuser
-
-# Copia o código da aplicação
-COPY --chown=appuser:appuser . .
-
-USER appuser
+COPY . .
 
 EXPOSE 8000
 
