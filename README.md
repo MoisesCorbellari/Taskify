@@ -59,7 +59,6 @@ A estrutura da aplicação é organizada da seguinte forma:
 │   ├── alembic.ini
 │   ├── Dockerfile
 │   ├── main.py
-│   ├── pyproject.toml
 │   └── requirements.txt
 ├── frontend
 │   ├── public
