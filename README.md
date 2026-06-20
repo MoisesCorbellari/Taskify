@@ -12,8 +12,7 @@ Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para c
 
 ---
 
-### Estrutura
-A API é estruturada da seguinte forma:
+### Estrutura da API
 ```
 ├── backend
 │   ├── .github
