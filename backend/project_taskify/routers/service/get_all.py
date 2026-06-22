@@ -8,9 +8,10 @@ from project_taskify.schemas.schema import TaskResponse
 
 router = APIRouter()
 
-#endpoint para obter todas as tarefas
+
+# endpoint para obter todas as tarefas
 @router.get("/", response_model=List[TaskResponse])
 async def get_all_task(db: AsyncSession = Depends(get_db)) -> List[TaskResponse]:
-    result = await  db.execute(select(Task))
+    result = await db.execute(select(Task))
 
     return result.scalars().all()

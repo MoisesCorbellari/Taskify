@@ -18,7 +18,7 @@ if not database_url:
 # access to the values within the .ini file in use.
 config = context.config
 
-config.set_main_option('sqlalchemy.url', database_url)
+config.set_main_option("sqlalchemy.url", database_url)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -28,7 +28,7 @@ if config.config_file_name is not None:
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-from project_taskify.models.task_model import Task # type: ignore
+from project_taskify.models.task_model import Task  # type: ignore
 
 from shared.database import Base
 
@@ -70,8 +70,9 @@ def run_migrations_online() -> None:
     connectable = async_engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
-        poolclass=pool.NullPool, # evita pool de conexões (bom pra migrations)
+        poolclass=pool.NullPool,  # evita pool de conexões (bom pra migrations)
     )
+
     # Função async que realmente vai abrir a conexão
     async def run():
         # Aqui é o ponto crítico: precisa ser async with (não pode ser with normal)
@@ -79,6 +80,7 @@ def run_migrations_online() -> None:
             # Alembic é síncrono internamente,
             # então usamos run_sync pra "traduzir" async -> sync
             await connection.run_sync(do_run_migrations)
+
     # Executa a função async
     asyncio.run(run())
 
@@ -87,7 +89,7 @@ def do_run_migrations(connection):
     # Configura o contexto do Alembic com a conexão ativa
     context.configure(
         connection=connection,
-        target_metadata=target_metadata, # seus models (Base.metadata)
+        target_metadata=target_metadata,  # seus models (Base.metadata)
     )
     # Inicia a transação das migrations
     with context.begin_transaction():

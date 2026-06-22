@@ -7,9 +7,7 @@ load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
 
-engine = create_async_engine(
-    TOKEN
-)
+engine = create_async_engine(TOKEN)
 AsyncSessionLocal = async_sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()

@@ -2,6 +2,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from datetime import date
 from typing import Optional
 
+
 class TaskResponse(BaseModel):
     id: int
     title: str
@@ -10,9 +11,8 @@ class TaskResponse(BaseModel):
     completed: bool
 
     class Config:
-        model_config = ConfigDict(
-            from_attributes=True
-        )
+        model_config = ConfigDict(from_attributes=True)
+
 
 class TaskRequest(BaseModel):
     title: str = Field(min_length=1, max_length=50)

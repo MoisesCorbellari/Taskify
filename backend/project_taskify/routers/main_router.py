@@ -7,11 +7,7 @@ from .service.finish import router as finish_router
 from .service.delete import router as delete_router
 
 
-
-router = APIRouter(
-    prefix='/tasks', 
-    tags=["Lista de tarefas"]
-    )
+router = APIRouter(prefix="/tasks", tags=["Lista de tarefas"])
 
 router.include_router(get_all_router)
 router.include_router(get_by_id_router)
