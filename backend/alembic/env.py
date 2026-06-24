@@ -1,12 +1,13 @@
+import asyncio
 import os
-from dotenv import load_dotenv
 from logging.config import fileConfig
 
-from sqlalchemy.ext.asyncio import async_engine_from_config
-from sqlalchemy import pool
-import asyncio
-
 from alembic import context
+from dotenv import load_dotenv
+from sqlalchemy import pool
+from sqlalchemy.ext.asyncio import async_engine_from_config
+from project_taskify.models.task_model import Task  # noqa: F401 - required for Alembic autogenerate
+from shared.database import Base
 
 load_dotenv()
 
@@ -28,9 +29,6 @@ if config.config_file_name is not None:
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-from project_taskify.models.task_model import Task  # type: ignore
-
-from shared.database import Base
 
 target_metadata = Base.metadata
 
