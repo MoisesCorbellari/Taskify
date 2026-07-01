@@ -27,8 +27,8 @@ Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para c
 │   │   │   ├── b458adf3741f_rename_table_doup_to_doup_tasks.py
 │   │   │   ├── e8f7add0cff4_rename_table.py
 │   │   │   └── fd79eb160aa1_criando_tabela_tarefas.py
-│   │   ├── README
 │   │   ├── env.py
+│   │   ├── README
 │   │   └── script.py.mako
 │   ├── project_taskify
 │   │   ├── models
@@ -61,16 +61,15 @@ Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para c
 │   └── requirements.txt
 ├── frontend
 │   ├── public
-│   │   └── index.html
-│   ├── src
-│   │   ├── assets
-│   │   │   └── img
-│   │   │       └── logo.webp
-│   │   └── services
-│   │       ├── main.js
-│   │       └── message.js
-│   └── styles
-│       └── main.css
+│   │   ├── services
+│   │   │   └── message.js
+│   │   └── src
+│   │       ├── assets
+│   │       │   └── img
+│   │       │       └── logo.webp
+│   │       └── styles
+│   │           └── main.css
+│   └── index.html
 ├── .gitignore
 └── README.md
 ```
