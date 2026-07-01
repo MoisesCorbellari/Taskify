@@ -1,6 +1,6 @@
 # Taskify - Lista de Tarefas
 Projeto voltado para aplicação prática de conhecimentos em desenvolvimento de APIs.  
-Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o Taskify fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade de finalização de tarefas.
+Desenvolvido com **SQLAlchemy** para persistência de dados e **Alembic** para controle de migrações, o Taskify fornece uma API que permite ao usuário organizar suas atividades diárias por meio de operações *CRUD* (criar, ler, atualizar, excluir tarefas), além da funcionalidade para finalização de tarefas.
 
 ### Tecnologias Utilizadas
 - **Python 3.14**: Linguagem de programação principal
