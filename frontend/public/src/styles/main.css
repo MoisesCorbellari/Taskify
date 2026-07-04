@@ -10,9 +10,10 @@ body {
 }
 
 .name {
-  font-size: 2rem;
-  margin: 0px;
-  color: #0AAEFF;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #2c3438;
   text-align: center;
 }
 
@@ -37,6 +38,7 @@ body {
 .title {
   font-size: 1.3rem;
   margin: 10px 0 5px;
+  color: #3F4A50;
   
 }
 
@@ -75,7 +77,7 @@ body {
 .taskTitle:focus,
 .taskDescription:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.25);
+  box-shadow: 0 0 0 3px rgba(63, 74, 80, 0.1);
   background: linear-gradient(#fff, #fff) padding-box,
               linear-gradient(45deg, #203A4C, #00BFFF) border-box;
 }
@@ -133,7 +135,7 @@ body {
 .tasks:hover,
 .tasks:focus {
   transform: translateY(-2px); /* eleva levemente o elemento */
-  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.25), 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 3px rgba(63, 74, 80, 0.1), 0 4px 8px rgba(0,0,0,0.2);
   outline: none; /* remove contorno padrão do navegador */
 }
 
@@ -146,7 +148,7 @@ body {
   border-radius: 1rem;
   box-sizing: border-box;
   overflow: auto;
-  z-index: auto /*faz com que o z-index seja o mesmo do background*/;
+  z-index: auto; /*faz com que o z-index seja o mesmo do background*/;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* leve sombra */
 }
@@ -166,4 +168,8 @@ td {
 
 th {
   background-color: #f2f2f2; /* Cor de fundo para cabeçalhos */
+}
+
+#tabela{
+  width: 44rem;
 }
