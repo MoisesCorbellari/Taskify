@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   margin: 0;
   padding: 20px;
 }
@@ -13,7 +10,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 24px;
-  color: #2c3438;
+  color: #e45d6e;
   text-align: center;
 }
 
@@ -22,6 +19,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 1rem;
 }
 
 /* Formulário */
@@ -38,8 +38,7 @@ body {
 .title {
   font-size: 1.3rem;
   margin: 10px 0 5px;
-  color: #3F4A50;
-  
+  color: #3f4a50;
 }
 
 .taskTitle {
@@ -48,13 +47,13 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   border: 2px solid transparent; /*borda base*/
-  background: linear-gradient(#fff, #fff) padding-box, /* fundo branco */
-              linear-gradient(45deg, #203A4C, #6ECFFF) border-box; /*gradiente na borda com DodgerBlue*/
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    /* fundo branco */ linear-gradient(45deg, #203a4c, #f08080) border-box; /*gradiente na borda com DodgerBlue*/
   box-sizing: border-box;
   font-size: 1.2rem;
   font-family: inherit;
   text-align: center;
-  width: 40rem;
 }
 
 .taskDescription {
@@ -63,9 +62,9 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   border: 2px solid transparent; /*borda base*/
-  background: linear-gradient(#fff, #fff) padding-box, /*fundo branco*/
-              linear-gradient(45deg, #203A4C, #6ECFFF) border-box; /*gradiente na  com DodgerBlue*/
-  width: min(40rem, 90vw);
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    /*fundo branco*/ linear-gradient(45deg, #203a4c, #f08080) border-box; /*gradiente na  com DodgerBlue*/
   box-sizing: border-box;
   resize: vertical;
   min-height: 5rem;
@@ -74,12 +73,18 @@ body {
   text-align: center;
 }
 
+.taskTitle,
+.taskDescription {
+  width: min(40rem, 90vw);
+}
+
 .taskTitle:focus,
 .taskDescription:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(63, 74, 80, 0.1);
-  background: linear-gradient(#fff, #fff) padding-box,
-              linear-gradient(45deg, #203A4C, #00BFFF) border-box;
+  box-shadow: 0 0 0 3px rgba(63, 74, 80, 0);
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #203a4c, #fff1ee) border-box;
 }
 
 .btnAdd {
@@ -87,10 +92,11 @@ body {
   margin: auto;
   padding: 10px 20px;
   border-radius: 1rem;
-  color: #21324A;
+  color: #21324a;
   border: 2px solid transparent; /*borda base*/
-  background: linear-gradient(#fff, #fff) padding-box, /*fundo branco*/
-              linear-gradient(45deg, #203A4C, #6ECFFF) border-box; /*gradiente na  com DodgerBlue*/
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    /*fundo branco*/ linear-gradient(45deg, #203a4c, #f08080) border-box; /*gradiente na  com DodgerBlue*/
   cursor: pointer;
   font-size: 1.3rem;
   font-family: inherit;
@@ -99,13 +105,14 @@ body {
 
 .btnAdd:hover,
 .btnAdd:focus {
-  background: linear-gradient(#fff, #fff) padding-box,
-              linear-gradient(45deg, #203A4C, #00BFFF) border-box;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #fff1ee, #fff1ee) border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra mais destacada */
 }
 
-.btnAdd:active{
-  background: #E9F2FF; /* cor enquanto pressionado */
+.btnAdd:active {
+  background: #e9f2ff; /* cor enquanto pressionado */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* sombra mais baixa */
   transform: translateY(2px); /* efeito ao pressionar */
 }
@@ -119,8 +126,9 @@ body {
   margin: 0.5rem;
   border-radius: 1rem;
   border: 1px solid transparent;
-  background: linear-gradient(#fff, #fff) padding-box,
-              linear-gradient(45deg, #203A4C, #6ECFFF) border-box;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #203a4c, #f2c9b8) border-box;
   box-sizing: border-box;
   overflow: auto;
   z-index: auto; /*faz com que o z-index seja o mesmo do background*/
@@ -135,7 +143,9 @@ body {
 .tasks:hover,
 .tasks:focus {
   transform: translateY(-2px); /* eleva levemente o elemento */
-  box-shadow: 0 0 0 3px rgba(63, 74, 80, 0.1), 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow:
+    0 0 0 3px rgba(63, 74, 80, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.2);
   outline: none; /* remove contorno padrão do navegador */
 }
 
@@ -148,28 +158,33 @@ body {
   border-radius: 1rem;
   box-sizing: border-box;
   overflow: auto;
-  z-index: auto; /*faz com que o z-index seja o mesmo do background*/;
+  z-index: auto; /*faz com que o z-index seja o mesmo do background*/
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* leve sombra */
+}
+
+::placeholder {
+  color: #7f8891;
 }
 
 table {
   width: 100%; /* Ocupa toda a largura disponível */
   border-collapse: collapse; /* Remove espaçamento entre as células */
-  border: 1px solid #000; /* Borda ao redor da tabela */
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 th,
 td {
-  border: 1px solid #000; /* Borda ao redor das células */
+  border: 1px solid #e5e7eb; /* Borda ao redor das células */
   padding: 8px; /* Espaçamento interno */
   text-align: left; /* Alinhamento do texto */
 }
 
 th {
-  background-color: #f2f2f2; /* Cor de fundo para cabeçalhos */
+  background-color: #f8e8e8; /* Cor de fundo para cabeçalhos */
 }
 
-#tabela{
-  width: 44rem;
+#tabela {
+  width: min(40rem, 90vw);
 }
