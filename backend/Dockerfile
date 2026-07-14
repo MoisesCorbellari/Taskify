@@ -1,5 +1,5 @@
 # Build das dependências
-FROM python:3.14-slim AS builder
+FROM python:3.14-slim-trixie AS builder
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 
 # Imagem final
-FROM python:3.14-slim
+FROM python:3.14-slim-trixie
 
 # Configurações do Python
 ENV PYTHONDONTWRITEBYTECODE=1 \
