@@ -10,7 +10,7 @@ from uvicorn import run
 logfire.configure(token=os.environ["LOGFIRE_TOKEN"])
 
 app = FastAPI(
-    title="Taskify - Lista de Tarefas",
+    title="Taskify - Lista de Tarefas!",
     description="""
     API para gerenciamento de tarefas, fornece endpoints para operações CRUD (Create, Read, Update, Delete), além de um endpoint específico para finalizar tarefas.
     """,
