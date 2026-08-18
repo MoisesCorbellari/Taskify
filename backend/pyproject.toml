@@ -1,3 +1,6 @@
+[tool.fastapi]
+entrypoint = "main:app"
+
 [project]
 name = "project-taskify"
 version = "0.1.0"
