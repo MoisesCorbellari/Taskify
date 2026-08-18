@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskify</title>
+  <link rel="icon" href="./public/src/assets/img/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="./public/src/styles/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="name">Taskify - Lista de Tarefas</h1>
+  </header>
+
+  <div class="container">
+
+    <section class="app">
+      <label class="title" for="taskTitle">Título da tarefa *</label>
+      <input class="taskTitle" id="taskTitle" name="taskTitle" placeholder="Título da tarefa" required>
+
+      <label class="title" for="taskDescription">Descrição da tarefa</label>
+      <textarea class="taskDescription" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa (opcional)"></textarea>
+
+      <button class="btnAdd" type="submit" id="addTask" onclick="adicionaTarefa()">Adicionar tarefa</button>
+    </section>
+
+    <section>
+      <div class="taskgroup" type="submit" id="taskgroup">
+        <div class="tasks" id="registered">Cadastradas</div>
+        <div class="tasks" id="pending">Pendentes</div>
+        <div class="tasks" id="completed">Finalizadas</div>
+      </div>
+    </section>
+
+    <section id="tabela">
+    </section>
+
+
+  </div>
+
+  <script src="./public/services/message.js"></script>
+</body>
+
+</html>
