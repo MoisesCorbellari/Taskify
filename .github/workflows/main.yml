@@ -12,7 +12,7 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.14"
+          install-python: "true"
 
       - name: Deploy to FastAPI Cloud
         working-directory: ./backend
