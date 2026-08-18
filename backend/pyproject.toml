@@ -2,7 +2,7 @@
 name = "project-taskify"
 version = "0.1.0"
 description = ""
-requires-python = ">=3.12,<3.14"
+requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.19.1",
     "asyncpg>=0.31.0",
