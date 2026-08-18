@@ -7,7 +7,7 @@ from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
 from uvicorn import run
 
-logfire.configure(token=os.environ["LOGFIRE"])
+logfire.configure(token=os.environ["LOGFIRE_TOKEN"])
 
 app = FastAPI(
     title="Taskify - Lista de Tarefas!",
