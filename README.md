@@ -1,4 +1,4 @@
-# [Taskify - Lista de Tarefas](https://taskify-dev.fastapicloud.dev/docs)
+# [Taskify - Lista de Tarefas](https://taskify-dev-72758735.fastapicloud.dev/docs)
 É um projeto voltado para aplicação prática de conceitos de desenvolvimento de APIs REST.
 
 A aplicação utiliza o **ORM (Object-Relational Mapping) SQLAlchemy** para persistência e o gerenciamento dos dados e **Alembic** para controle das migrações do banco de dados. A API permite aos usuários organizarem suas atividades diárias por meio de operações *CRUD* (Create, Read, Update, Delete), além de disponibilizar um endpoint específico para marcar as tarefas como concluídas.
