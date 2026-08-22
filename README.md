@@ -38,14 +38,6 @@ O backend da aplicação está hospedado no [FastAPI Cloud](https://fastapicloud
 │   └── workflows
 │       └── main.yml
 ├── backend
-│   ├── .fastapicloud
-│   │   ├── .gitignore
-│   │   ├── README.md
-│   │   ├── __init__.py
-│   │   └── cloud.json
-│   ├── .github
-│   │   └── workflows
-│   │       └── deploy.yml
 │   ├── app
 │   │   ├── api
 │   │   │   ├── router
