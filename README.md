@@ -1,4 +1,4 @@
-# [Taskify - Lista de Tarefas](https://taskify-dev-72758735.fastapicloud.dev/docs)
+# [Taskify - Lista de Tarefas](https://taskify-e767a91e.fastapicloud.dev/docs)
 É um projeto voltado para aplicação prática de conceitos de desenvolvimento de APIs REST.
 
 A aplicação utiliza o **ORM (Object-Relational Mapping) SQLAlchemy** para persistência e o gerenciamento dos dados e **Alembic** para controle das migrações do banco de dados. A API permite aos usuários organizarem suas atividades diárias por meio de operações *CRUD* (Create, Read, Update, Delete), além de disponibilizar um endpoint específico para marcar as tarefas como concluídas.
@@ -34,6 +34,9 @@ O backend da aplicação está hospedado no [FastAPI Cloud](https://fastapicloud
 
 ### Estrutura da API
 ```bash
+├── .github
+│   └── workflows
+│       └── main.yml
 ├── backend
 │   ├── .fastapicloud
 │   │   ├── .gitignore
@@ -71,8 +74,8 @@ O backend da aplicação está hospedado no [FastAPI Cloud](https://fastapicloud
 │   │   │   ├── b458adf3741f_rename_table_doup_to_doup_tasks.py
 │   │   │   ├── e8f7add0cff4_rename_table.py
 │   │   │   └── fd79eb160aa1_criando_tabela_tarefas.py
-│   │   ├── env.py
 │   │   ├── README
+│   │   ├── env.py
 │   │   └── script.py.mako
 │   ├── shared
 │   │   ├── __init__.py
@@ -81,10 +84,12 @@ O backend da aplicação está hospedado no [FastAPI Cloud](https://fastapicloud
 │   │   ├── exception.py
 │   │   ├── exceptions_handler.py
 │   │   └── types.py
-│   ├── alembic.ini
+│   ├── .dockerignore
 │   ├── Dockerfile
+│   ├── alembic.ini
 │   ├── main.py
-│   └── requirements.txt
+│   ├── pyproject.toml
+│   └── uv.lock
 ├── frontend
 │   ├── public
 │   │   ├── services
