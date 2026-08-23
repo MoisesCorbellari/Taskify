@@ -23,12 +23,12 @@ O backend da aplicação está hospedado no [FastAPI Cloud](https://fastapicloud
     - Swagger UI: [localhost:8000/docs](http://localhost:8000/docs)
 
 ### Tecnologias Utilizadas
-- **Python 3.14**: Linguagem de programação principal
-- **FastAPI**: Framework para desenvolvimento de APIs
-- **SQLAlchemy**: Biblioteca ORM (Object-Relational Mapping) para interação com banco de dados
-- **Alembic**: Ferramenta para migrações de banco de dados
-- **Uvicorn**: Servidor ASGI (Asynchronous Server Gateway Interface) para executar aplicações FastAPI
-- **DBeaver**: Gerenciador multiplataforma para bancos de dados
+- **Python 3.14**: linguagem de programação principal
+- **FastAPI**: framework web para criação de APIs
+- **SQLAlchemy**: biblioteca ORM (Object-Relational Mapping) para interação com banco de dados
+- **Alembic**: ferramenta de migração de banco de dados 
+- **Uvicorn**: servidor ASGI (Asynchronous Server Gateway Interface) para executar aplicações FastAPI
+- **DBeaver**: gerenciador multiplataforma para bancos de dados
 
 ---
 
