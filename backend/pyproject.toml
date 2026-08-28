@@ -1,10 +1,7 @@
-[tool.fastapi]
-entrypoint = "main:app"
-
 [project]
 name = "project-taskify"
 version = "0.1.0"
-description = ""
+description = "Backend da aplicação Taskify"
 requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.19.1",
@@ -17,3 +14,7 @@ dependencies = [
     "sqlalchemy>=2.0.52",
     "uvicorn[standard]>=0.52.4",
 ]
+
+[tool.fastapi]
+entrypoint = "main:app"
+
