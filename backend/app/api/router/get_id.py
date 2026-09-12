@@ -1,6 +1,6 @@
 from fastapi import APIRouter
+from shared.alias import DbSession
 from shared.dependencies import get_task_or_404
-from shared.types import DbSession
 
 from app.schemas.schema import TaskResponse
 

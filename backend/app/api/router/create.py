@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from shared.types import DbSession
+from shared.alias import DbSession
 
 from app.models.task_model import Task
 from app.schemas.schema import TaskRequest, TaskResponse
