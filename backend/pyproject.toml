@@ -1,7 +1,7 @@
 [project]
-name = "project-taskify"
+name = "taskify"
 version = "0.1.0"
-description = "Backend da aplicação Taskify"
+description = "dependências do backend da aplicação"
 requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.19.1",
