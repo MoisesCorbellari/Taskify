@@ -1,9 +1,0 @@
-name: Taskify
-values:
-  - key: Taskify
-    value: 'http://localhost:8000'
-  - key: customTitle
-    value: ''
-  - key: customDescription
-    value: ''
-color: 180
