@@ -4,5 +4,29 @@ method: GET
 body:
   type: json
   content: ""
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response is a non-empty array", function () {
+          var jsonData = pm.response.json();
+          pm.expect(jsonData).to.be.an('array');
+          pm.expect(jsonData.length).to.be.above(0);
+      });
+
+      pm.test("Task items have expected structure", function () {
+          var jsonData = pm.response.json();
+          if (jsonData.length > 0) {
+              var task = jsonData[0];
+              pm.expect(task).to.have.property('id');
+              pm.expect(task).to.have.property('title');
+              pm.expect(task).to.have.property('description');
+              pm.expect(task).to.have.property('created');
+              pm.expect(task).to.have.property('completed');
+          }
+      });
 settings: {}
 order: 2000
