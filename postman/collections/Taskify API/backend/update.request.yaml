@@ -1,0 +1,68 @@
+$kind: http-request
+url: "{{Taskify}}/tasks/10"
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+        "title": "{{customTitle}}",
+        "description": "{{customDescription}}",
+        "completed": false
+    }
+scripts:
+  - type: beforeRequest
+    code: |
+      // Lista de títulos e descrições (coerentes para testes de API)
+      const titles = [
+        "Refatorar o módulo de autenticação",
+        "Implementar endpoint de tarefas",
+        "Corrigir bug no deploy pipeline",
+        "Melhorar performance do banco de dados",
+        "Atualizar dependências do projeto",
+        "Adicionar testes unitários ao módulo de usuários",
+        "Criar sistema de notificações em tempo real",
+        "Configurar autenticação via OAuth2",
+        "Refatorar código para melhorar a legibilidade",
+        "Documentar API com Swagger",
+        "Implementar paginação nos endpoints",
+        "Adicionar validação de dados no backend",
+        "Criar middleware de logging",
+        "Implementar rate limit na API",
+        "Configurar cache com Redis",
+        "Adicionar endpoint de health check",
+        "Padronizar respostas de erro da API",
+        "Implementar soft delete nos registros",
+        "Adicionar versionamento da API",
+        "Criar endpoint de busca com filtros"
+      ];
+
+      const descriptions = [
+        "Revisar o código de login e tokens JWT.",
+        "Criar endpoints REST para CRUD de tarefas.",
+        "Ajustar falhas no fluxo de CI/CD durante o deploy.",
+        "Analisar índices, queries lentas e otimizações no banco.",
+        "Atualizar bibliotecas e verificar possíveis breaking changes.",
+        "Garantir cobertura mínima de testes automatizados.",
+        "Enviar eventos em tempo real para o frontend.",
+        "Integrar autenticação com provedores externos.",
+        "Aplicar boas práticas de clean code.",
+        "Gerar documentação interativa da API.",
+        "Adicionar parâmetros page e limit aos endpoints.",
+        "Validar payloads de entrada com mensagens claras.",
+        "Registrar requisições e respostas para auditoria.",
+        "Evitar abuso da API limitando requisições por IP.",
+        "Reduzir carga no banco usando cache distribuído.",
+        "Criar endpoint para monitoramento da aplicação.",
+        "Retornar erros padronizados com códigos e mensagens.",
+        "Marcar registros como inativos sem removê-los do banco.",
+        "Versionar endpoints para manter compatibilidade.",
+        "Permitir buscas por múltiplos critérios nos endpoints."
+      ];
+
+      const index = Math.floor(Math.random() * titles.length);
+
+      pm.environment.set("customTitle", titles[index]);
+      pm.environment.set("customDescription", descriptions[index]);
+    language: text/javascript
+settings: {}
+order: 5000

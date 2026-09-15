@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{Taskify}}/tasks/12"
+method: DELETE
+body:
+  type: text
+  content: |-
+    {
+        "title": "{{customTitle}}",
+        "description": "{{customDescription}}",
+        "completed": false
+    }
+settings: {}
+order: 7000

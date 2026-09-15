@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{Taskify}}/tasks/finish/30"
+method: PATCH
+body:
+  type: text
+  content: ""
+settings: {}
+order: 6000
