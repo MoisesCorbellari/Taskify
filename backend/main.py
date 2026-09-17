@@ -20,7 +20,7 @@ app = FastAPI(
 
 @app.get(
     "/",
-    summary="página inicial",
+    summary="Página inicial",
 )
 def taskify():
     return "Taskify - Lista de tarefas"
