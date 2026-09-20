@@ -1,5 +1,5 @@
 # Estágio de compilação (Builder)
-FROM python:3.14-slim AS builder
+FROM python:3.14-slim-trixie AS builder
 
 WORKDIR /app
 
@@ -24,7 +24,7 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --no-dev --frozen --no-install-project
 
 # Estágio final
-FROM python:3.14-slim
+FROM python:3.14-slim-trixie
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
