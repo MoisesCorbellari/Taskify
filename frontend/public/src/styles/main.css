@@ -176,7 +176,7 @@ th,
 td {
   border: 1px solid #e5e7eb; /* Borda ao redor das células */
   padding: 8px; /* Espaçamento interno */
-  text-align: left; /* Alinhamento do texto */
+  text-align: center; /* Alinhamento do texto */
 }
 
 th {
