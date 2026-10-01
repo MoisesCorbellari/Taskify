@@ -4,15 +4,15 @@ version = "0.1.0"
 description = "dependências do backend da aplicação"
 requires-python = ">=3.14"
 dependencies = [
-    "alembic>=1.19.1",
+    "alembic>=1.20.0",
     "asyncpg>=0.31.0",
-    "fastapi[standard]>=0.141.1",
-    "logfire[fastapi]>=4.41.0",
+    "fastapi[standard]>=0.142.2",
+    "logfire[fastapi]>=5.1.1",
     "pydantic>=2.13.5",
-    "python-dotenv>=1.2.3",
+    "python-dotenv>=1.2.4",
     "requests>=2.34.2",
-    "sqlalchemy[asyncio]>=2.0.52",
-    "uvicorn[standard]>=0.52.4",
+    "sqlalchemy[asyncio]>=2.1.1",
+    "uvicorn[standard]>=0.54.0",
 ]
 
 [tool.fastapi]
