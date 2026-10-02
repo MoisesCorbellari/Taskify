@@ -28,7 +28,7 @@ jobs:
           exit-code: 1
       
       - name: Remove Trivy cache
-        run: rm -rf backend/.cache/trivy
+        run: rm -rf .cache/trivy
 
       - name: Deploy to FastAPI Cloud
         run: uv run --project backend fastapi deploy
