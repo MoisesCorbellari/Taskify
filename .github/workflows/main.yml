@@ -19,6 +19,17 @@ jobs:
       - name: Install dependencies
         run: uv sync --directory backend
 
+      - name: Trivy filesystem scan
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: backend
+          severity: CRITICAL,HIGH
+          exit-code: 1
+      
+      - name: Remove Trivy cache
+        run: rm -rf backend/.cache/trivy
+
       - name: Deploy to FastAPI Cloud
         run: uv run --project backend fastapi deploy
         env:
