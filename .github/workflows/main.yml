@@ -3,7 +3,7 @@ name: CI/CD - Deploy to FastAPI Cloud
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   deploy:
