@@ -1,5 +1,4 @@
 import pytest
-from app.models.task_model import Task  #noqa
 from httpx import ASGITransport, AsyncClient
 from main import app
 from shared.database import Base
