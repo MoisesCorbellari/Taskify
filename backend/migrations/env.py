@@ -3,14 +3,15 @@ import os
 from logging.config import fileConfig
 
 from alembic import context
-from app.models.task_model import (
-    Task,  # noqa: F401 - required for Alembic autogenerate
-)
 from dotenv import load_dotenv
-from shared.database import Base
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
+
+from app.models.task_model import (
+    Task,  # noqa: F401 - required for Alembic autogenerate
+)
+from shared.database import Base
 
 load_dotenv()
 

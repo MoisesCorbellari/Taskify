@@ -1,9 +1,9 @@
 from fastapi import APIRouter
-from shared.alias import DbSession
 from sqlalchemy import select
 
 from app.models.task_model import Task
 from app.schemas.schema import TaskResponse
+from shared.alias import DbSession
 
 router = APIRouter()
 

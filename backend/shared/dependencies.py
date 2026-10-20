@@ -7,7 +7,7 @@ from shared.database import AsyncSessionLocal
 from shared.exception import NotFound
 
 
-async def get_db() -> AsyncGenerator[AsyncSession, None]:
+async def get_db() -> AsyncGenerator[AsyncSession]:
     async with AsyncSessionLocal() as session:
         yield session
 

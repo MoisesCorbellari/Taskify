@@ -17,5 +17,5 @@ class TaskResponse(BaseModel):
 
 class TaskRequest(BaseModel):
     title: str = Field(min_length=1, max_length=50)
-    description: Optional[str] = Field(None, max_length=255) # noqa
+    description: Optional[str] = Field(None, max_length=255)  # noqa
     completed: bool = Field(default=False)

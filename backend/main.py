@@ -1,11 +1,12 @@
 import os
 
 import logfire
-from app.api.api_router import router
 from fastapi import FastAPI
+from uvicorn import run
+
+from app.api.api_router import router
 from shared.exception import NotFound
 from shared.exceptions_handler import not_found_exception_handler
-from uvicorn import run
 
 logfire.configure(token=os.environ["LOGFIRE_TOKEN"])
 
@@ -17,13 +18,13 @@ app = FastAPI(
 )
 
 
-
 @app.get(
     "/",
     summary="Página inicial",
 )
 def taskify():
     return "Taskify - Lista de tarefas"
+
 
 app.include_router(router)
 app.add_exception_handler(NotFound, not_found_exception_handler)

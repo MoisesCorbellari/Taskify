@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from shared.alias import DbSession
-from shared.dependencies import get_task_or_404
 
 from app.schemas.schema import TaskRequest, TaskResponse
+from shared.alias import DbSession
+from shared.dependencies import get_task_or_404
 
 router = APIRouter()
 
