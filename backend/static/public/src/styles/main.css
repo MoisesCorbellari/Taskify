@@ -84,7 +84,7 @@ body {
   box-shadow: 0 0 0 3px rgba(63, 74, 80, 0);
   background:
     linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(45deg, #203a4c, #6495ED) border-box;
+    linear-gradient(45deg, #203a4c, #7FFFD4) border-box;
 }
 
 .btnAdd {
@@ -107,7 +107,7 @@ body {
 .btnAdd:focus {
   background:
     linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(45deg, #5E4FB8, #6959CD) border-box;
+    linear-gradient(45deg, #5E4FB8, #00FFFF) border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra mais destacada */
 }
 

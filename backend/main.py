@@ -50,31 +50,24 @@ async def request_validation_exception_handler(
     )
 
 
-# Desabilita o cache do frontend e das rotas de autenticação.
+# Desabilita o cache do frontend para refletir alterações imediatamente.
 @app.middleware("http")
 async def disable_frontend_caching(request: Request, call_next) -> Response:
     is_frontend_request = request.url.path == "/app" or request.url.path.startswith(
         "/app/"
     )
     if is_frontend_request:
-        had_query = bool(request.scope.get("query_string"))
-        request.scope["query_string"] = b""
         conditional_headers = {b"if-none-match", b"if-modified-since"}
         request.scope["headers"] = [
             (name, value)
             for name, value in request.scope["headers"]
             if name.lower() not in conditional_headers
         ]
-        if had_query and request.method == "GET":
-            response = RedirectResponse(url="/app/", status_code=303)
-            response.headers["Cache-Control"] = "no-store"
-            return response
 
     response = await call_next(request)
-    if is_frontend_request or request.url.path.startswith("/auth/"):
+    if is_frontend_request:
         response.headers["Cache-Control"] = "no-store"
     return response
-
 
 # Monta e disponibiliza os arquivos estáticos do frontend na rota /app.
 app.mount(
